@@ -8,10 +8,10 @@
 using namespace std;
 
 // Timer code
-typedef std::chrono::high_resolution_clock timer;
+typedef std::chrono::steady_clock timer;
 
-long time_msec(std::chrono::steady_clock::time_point start, 
-    std::chrono::steady_clock::time_point end)
+long time_msec(std::chrono::time_point<std::chrono::steady_clock> start, 
+    std::chrono::time_point<std::chrono::steady_clock> end)
 {
     return std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
 }

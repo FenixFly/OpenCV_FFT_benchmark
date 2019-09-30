@@ -12,7 +12,7 @@ set(CMAKE_CONFIGURATION_TYPES "Release" CACHE STRING "" FORCE)
 set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -Wall")
 
 # Find OpenCV installation folder
-find_package(OpenCV 4.0 REQUIRED)
+find_package(OpenCV REQUIRED)
 
 set(LIBRARY_DEPS ${OpenCV_LIBS})
 
